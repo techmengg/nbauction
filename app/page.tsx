@@ -20,7 +20,7 @@ export default function Home() {
             </code>
             .
           </li>
-          <li>Low Taper Fade</li>
+          <li>Low Penis Fade</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
