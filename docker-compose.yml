@@ -3,7 +3,7 @@ services:
   bid-buddy-db:
     image: postgres
     restart: always
-    container_name: bid-buddy-db
+    container_name: nbauction-db
     ports:
       - 5433:5432
     environment:

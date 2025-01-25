@@ -1,7 +1,10 @@
 import { ItemCard } from "@/app/item-card";
 import { database } from "@/db/database";
+import { auth } from "@/auth";
 
 export default async function HomePage() {
+  const session = await auth();
+
   const allItems = await database.query.items.findMany();
 
   return (

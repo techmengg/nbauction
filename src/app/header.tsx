@@ -25,7 +25,7 @@ export function Header() {
         <div className="flex items-center gap-12">
           <Link href="/" className="hover:underline flex items-center gap-1">
             <Image src="/logo.png" width="50" height="50" alt="Logo" />
-            BidBuddy.com
+            hush.vip
           </Link>
 
           <div className="flex items-center gap-8">
@@ -53,36 +53,7 @@ export function Header() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          {userId && (
-            <>
-              <NotificationIconButton
-                ref={notifButtonRef}
-                onClick={(e) => setIsVisible(!isVisible)}
-              />
-              <NotificationFeedPopover
-                buttonRef={notifButtonRef}
-                isVisible={isVisible}
-                onClose={() => setIsVisible(false)}
-                renderItem={({ item, ...props }) => (
-                  <NotificationCell {...props} item={item}>
-                    <div className="rounded-xl">
-                      <Link
-                        className="text-blue-400 hover:text=blue-500"
-                        onClick={() => {
-                          setIsVisible(false);
-                        }}
-                        href={`/items/${item.data.itemId}`}
-                      >
-                        Someone outbidded you on{" "}
-                        <span className="font-bold">{item.data.itemName}</span>{" "}
-                        by ${formatToDollar(item.data.bidAmount)}
-                      </Link>
-                    </div>
-                  </NotificationCell>
-                )}
-              />
-            </>
-          )}
+
 
           {session?.data?.user.image && (
             <Image
