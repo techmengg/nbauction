@@ -1,11 +1,12 @@
 import { bids as bidsSchema } from "@/db/schema";
 import { database } from "@/db/database";
+import { Button } from "@/components/ui/button";
 
 export default async function HomePage() {
   const bids = await database.query.bids.findMany();
 
   return (
-    <main className="container mx-auto p-4">
+    <main className="">
       <form
          action={async (formData: FormData) => {
           "use server";
@@ -13,7 +14,7 @@ export default async function HomePage() {
         }}
          >
           <input type="bid" placeholder="Bid" />
-          <button type="submit">Place Bid ! ! ! ! !</button>
+          <Button type="submit">Place Bid ! ! ! ! !</Button>
         </form>
 
         {bids.map((bid) => (
