@@ -25,7 +25,7 @@ export function Header() {
         <div className="flex items-center gap-12">
           <Link href="/" className="hover:underline flex items-center gap-1">
             <Image src="/logo.png" width="50" height="50" alt="Logo" />
-            hush.vip
+            hush
           </Link>
 
           <div className="flex items-center gap-8">
